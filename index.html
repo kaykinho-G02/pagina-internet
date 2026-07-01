@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Motivação Diária</title>
+
+<style>
+    body{
+        margin:0;
+        font-family:Arial, Helvetica, sans-serif;
+        background:linear-gradient(to right,#6a11cb,#2575fc);
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        height:100vh;
+        color:#fff;
+    }
+
+    .card{
+        width:700px;
+        max-width:90%;
+        background:rgba(255,255,255,0.12);
+        backdrop-filter:blur(8px);
+        border-radius:20px;
+        padding:40px;
+        text-align:center;
+        box-shadow:0 8px 20px rgba(0,0,0,.3);
+    }
+
+    h1{
+        font-size:40px;
+        margin-bottom:20px;
+    }
+
+    #frase{
+        font-size:24px;
+        margin:30px 0;
+        min-height:80px;
+    }
+
+    button{
+        padding:15px 35px;
+        border:none;
+        border-radius:30px;
+        background:#FFD700;
+        color:#333;
+        font-size:18px;
+        cursor:pointer;
+        transition:.3s;
+    }
+
+    button:hover{
+        transform:scale(1.08);
+        background:#fff;
+    }
+
+    footer{
+        margin-top:30px;
+        font-size:14px;
+        opacity:0.8;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h1>💪 Motivação do Dia</h1>
+
+    <p id="frase">
+        Clique no botão para receber uma mensagem inspiradora.
+    </p>
+
+    <button onclick="novaFrase()">
+        Nova Mensagem
+    </button>
+
+    <footer>
+        Nunca pare de acreditar em você.
+    </footer>
+</div>
+
+<script>
+const frases = [
+"Você é capaz de conquistar coisas incríveis!",
+"O primeiro passo é acreditar que é possível.",
+"Cada dia é uma nova oportunidade para crescer.",
+"Não tenha medo de recomeçar.",
+"O sucesso é construído com dedicação diária.",
+"Persistência supera talento quando o talento não persiste.",
+"Transforme seus sonhos em metas e suas metas em realidade.",
+"Seu futuro depende das escolhas que você faz hoje.",
+"Desafios existem para revelar sua força.",
+"Continue. Você está mais perto do que imagina."
+];
+
+function novaFrase(){
+    let sorteio = Math.floor(Math.random() * frases.length);
+    document.getElementById("frase").textContent = frases[sorteio];
+}
+</script>
+
+</body>
+</html>
