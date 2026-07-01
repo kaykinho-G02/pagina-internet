@@ -1,0 +1,140 @@
+/* Importando fonte do Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+/* Configurações gerais */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+/* Corpo da página */
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(-45deg,#4facfe,#00f2fe,#6a11cb,#2575fc);
+    background-size:400% 400%;
+    animation:fundo 12s ease infinite;
+}
+
+/* Animação do fundo */
+@keyframes fundo{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* Caixa principal */
+.container{
+    width:700px;
+    max-width:90%;
+    padding:40px;
+    text-align:center;
+    border-radius:25px;
+
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(15px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+    animation:aparecer 1.2s ease;
+}
+
+/* Animação de entrada */
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+h1{
+    font-size:42px;
+    color:white;
+    margin-bottom:20px;
+}
+
+p{
+    color:white;
+    font-size:20px;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+/* Botão */
+button{
+    padding:15px 40px;
+    border:none;
+    border-radius:40px;
+    background:#FFD700;
+    color:#333;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+
+    transition:0.4s;
+}
+
+button:hover{
+    transform:translateY(-5px) scale(1.05);
+    background:white;
+    box-shadow:0 10px 20px rgba(0,0,0,.3);
+}
+
+/* Área da frase */
+#mensagem{
+    margin-top:30px;
+    color:#fff;
+    font-size:24px;
+    font-weight:600;
+    min-height:70px;
+    animation:fade .5s;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+}
+
+/* Rodapé */
+footer{
+    margin-top:40px;
+    color:#ddd;
+    font-size:14px;
+}
+
+/* Responsividade */
+@media(max-width:768px){
+
+    .container{
+        padding:30px;
+    }
+
+    h1{
+        font-size:32px;
+    }
+
+    p{
+        font-size:18px;
+    }
+
+    button{
+        width:100%;
+    }
+
+    #mensagem{
+        font-size:20px;
+    }
+}
